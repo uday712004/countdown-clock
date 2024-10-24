@@ -1,0 +1,110 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 120px;
+  margin: 0 10px;
+  background-color: #2196F3;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.seperator {
+  font-size: 55px;
+  color: #555;
+}
+
+.card .flip {
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card .flip .front,
+.card .flip .back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+.card .flip .back {
+  transform: rotateY(180deg);
+}
+
+.flipped .flip {
+  transform: rotateY(180deg);
+}
+
+.label {
+  margin-top: 90px;
+  font-size: 1em;
+  color: #fff;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+}
+
+button:hover {
+  background-color: #1976D2;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
